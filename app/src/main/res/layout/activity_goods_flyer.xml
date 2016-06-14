@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <android.support.v4.view.ViewPager
+        android:id="@+id/goodsFlyer_viewPager"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" />
+
+    <RelativeLayout
+        android:id="@+id/goodsFlyer_bottomBar"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:layout_alignParentBottom="true"
+        android:background="#9b9b9b">
+
+        <RelativeLayout
+            android:id="@+id/goodsFlyer_previous"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_alignParentRight="true">
+
+            <ImageView
+                android:layout_width="28dp"
+                android:layout_height="24dp"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="12dp"
+                android:background="@drawable/btn_like" />
+        </RelativeLayout>
+    </RelativeLayout>
+</RelativeLayout>

@@ -1,0 +1,98 @@
+buildscript {
+    repositories {
+        maven { url 'https://maven.fabric.io/public' }
+    }
+
+    dependencies {
+        classpath 'io.fabric.tools:gradle:1.+'
+    }
+}
+
+apply plugin: 'com.android.application'
+apply plugin: 'io.fabric'
+apply plugin: 'com.google.gms.google-services'
+
+repositories {
+    maven { url 'https://maven.fabric.io/public' }
+}
+
+android {
+
+    def versionPropsFile = file('version.properties')
+
+    if (versionPropsFile.canRead()) {
+        def Properties versionProps = new Properties()
+
+        versionProps.load(new FileInputStream(versionPropsFile))
+
+        def version_Code = versionProps['VERSION_CODE'].toInteger()
+        def version_Name = versionProps['VERSION_NAME']
+
+        defaultConfig {
+            applicationId "com.haffle.superready"
+            minSdkVersion 14
+            targetSdkVersion 21
+            versionCode version_Code
+            versionName version_Name
+        }
+    } else {
+        throw new GradleException("Could not read version.properties!")
+    }
+
+    compileSdkVersion 21
+    buildToolsVersion "21.1.2"
+
+    signingConfigs {
+        staging {
+            storeFile file("SuperReadyAppKey_staging.keystore")
+            storePassword "haffle"
+            keyAlias "haffle_inhouse"
+            keyPassword "haffle"
+        }
+    }
+
+    buildTypes {
+        debug {
+            buildConfigField "boolean", "USE_KAKAO_ANALYTICS", "false"
+            buildConfigField "boolean", "USE_CRASHLYTICS", "false"
+            buildConfigField "String", "URL_ADDRESS", "\"-staging\""
+            buildConfigField "String", "BUILDTYPE", "\"DEBUG\""
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+        }
+        staging {
+            buildConfigField "boolean", "USE_KAKAO_ANALYTICS", "false"
+            buildConfigField "boolean", "USE_CRASHLYTICS", "true"
+            buildConfigField "String", "URL_ADDRESS", "\"-staging\""
+            buildConfigField "String", "BUILDTYPE", "\"STAGING\""
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+            signingConfig signingConfigs.staging
+            debuggable true
+        }
+        release {
+            buildConfigField "boolean", "USE_KAKAO_ANALYTICS", "true"
+            buildConfigField "boolean", "USE_CRASHLYTICS", "true"
+            buildConfigField "String", "URL_ADDRESS", "\"\""
+            buildConfigField "String", "BUILDTYPE", "\"RELEASE\""
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+        }
+    }
+}
+
+dependencies {
+    compile 'com.google.android.gms:play-services:7.8.0'
+    compile 'com.google.android.gms:play-services-gcm:7.8.0'
+    compile 'com.android.support:support-v4:22.2.0'
+    compile 'com.github.bumptech.glide:glide:3.6.0'
+    compile 'com.android.support:appcompat-v7:22.2.0'
+    compile 'com.squareup.okhttp:okhttp:2.4.0'
+    compile 'com.squareup.okio:okio:1.4.0'
+    compile 'com.github.chrisbanes.photoview:library:1.2.3'
+    compile files('libs/kakao-android-sdk-analytics-1.0.8.jar')
+    compile group: project.KAKAO_SDK_GROUP, name: 'kakaolink', version: project.KAKAO_SDK_VERSION
+    compile('com.crashlytics.sdk.android:crashlytics:2.3.2@aar') {
+        transitive = true;
+    }
+}

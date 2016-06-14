@@ -1,0 +1,156 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.haffle.superready.market.MainActivity">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#f2f2f2">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="52dp">
+
+                <ImageView
+                    android:id="@+id/main_locationSetting"
+                    android:layout_width="34dp"
+                    android:layout_height="36dp"
+                    android:layout_centerVertical="true"
+                    android:background="@drawable/change_location_btn"
+                    android:layout_marginLeft="8dp" />
+
+                <ImageView
+                    android:id="@+id/main_customerSupport"
+                    android:layout_width="34dp"
+                    android:background="@drawable/customer_support_btn"
+                    android:layout_height="36dp"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="16dp"
+                    android:layout_toRightOf="@+id/main_locationSetting" />
+
+                <ImageView
+                    android:background="@drawable/market_request_btn"
+                    android:id="@+id/main_marketRequest"
+                    android:layout_width="32dp"
+                    android:layout_height="36dp"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="16dp"
+                    android:layout_toRightOf="@+id/main_customerSupport" />
+
+                <ImageView
+                    android:background="@drawable/coupon_box_btn"
+                    android:id="@+id/main_couponPocket"
+                    android:layout_width="26dp"
+                    android:layout_height="36dp"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="16dp"
+                    android:layout_toRightOf="@+id/main_marketRequest" />
+
+                <ImageView
+                    android:layout_width="12dp"
+                    android:layout_height="14dp"
+                    android:layout_centerVertical="true"
+                    android:layout_marginRight="4dp"
+                    android:layout_toLeftOf="@+id/main_location"
+                    android:background="@drawable/home_bar_image_here" />
+
+                <TextView
+                    android:id="@+id/main_location"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginRight="12dp"
+                    android:includeFontPadding="false"
+                    android:textColor="#4e4e4e"
+                    android:textSize="14dp" />
+            </RelativeLayout>
+
+            <fragment
+                android:id="@+id/main_locationMap"
+                android:name="com.example.GoogleMapVersion2.Fragment"
+                class="com.google.android.gms.maps.SupportMapFragment"
+                android:layout_width="match_parent"
+                android:layout_height="160dp" />
+
+            <RelativeLayout
+                android:id="@+id/main_marketFavoriteText"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingLeft="8dp"
+                android:paddingRight="8dp"
+                android:visibility="gone">
+
+                <TextView
+                    android:id="@+id/main_myFavoriteMarket"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="12dp"
+                    android:text="나의 관심마켓"
+                    android:textColor="#ff1d1d"
+                    android:textSize="14dp" />
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:layout_below="@+id/main_myFavoriteMarket"
+                    android:layout_marginBottom="7dp"
+                    android:layout_marginTop="2dp"
+                    android:background="#ff1d1d" />
+            </RelativeLayout>
+
+            <LinearLayout
+                android:id="@+id/main_marketFavorite"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical" />
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingLeft="8dp"
+                android:paddingRight="8dp">
+
+                <TextView
+                    android:id="@+id/main_myRegionMarket"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="12dp"
+                    android:text="이 지역 슈퍼레디 마켓"
+                    android:textColor="#ff1d1d"
+                    android:textSize="14dp" />
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:layout_below="@+id/main_myRegionMarket"
+                    android:layout_marginBottom="7dp"
+                    android:layout_marginTop="2dp"
+                    android:background="#ff1d1d" />
+            </RelativeLayout>
+
+            <LinearLayout
+                android:id="@+id/main_marketRegion"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical" />
+        </LinearLayout>
+    </ScrollView>
+
+    <ProgressBar
+        android:id="@+id/main_progressBar"
+        style="?android:attr/progressBarStyle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_centerVertical="true" />
+
+</RelativeLayout>

@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#ff1d1d" >
+
+    <RelativeLayout
+        android:id="@+id/titlebarLocation_back"
+        android:layout_width="48dp"
+        android:layout_height="48dp" >
+
+        <ImageView
+            android:layout_width="24dp"
+            android:layout_height="24dp"
+            android:layout_alignParentLeft="true"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="12dp"
+            android:background="@drawable/navi_btn_previous" />
+    </RelativeLayout>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/titlebarLocation_location"
+        android:layout_centerHorizontal="true"
+        android:gravity="center"
+        android:text="위치선택"
+        android:textColor="#ffffff"
+        android:textSize="12dp" />
+
+    <TextView
+        android:id="@+id/titlebarLocation_location"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:gravity="center"
+        android:textColor="#ffffff"
+        android:textSize="16dp" />
+
+    <RelativeLayout
+        android:id="@+id/titlebarLocation_complete"
+        android:layout_width="48dp"
+        android:layout_height="48dp"
+        android:layout_alignParentRight="true" >
+
+        <ImageView
+            android:layout_width="24dp"
+            android:layout_height="24dp"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="12dp"
+            android:background="@drawable/mappicker_navi_btn_ok" />
+    </RelativeLayout>
+
+</RelativeLayout>

@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:paddingLeft="8dp"
+    android:paddingRight="8dp">
+
+    <TextView
+        android:id="@+id/item_campaignsDivision_name"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#46b8c9"
+        android:paddingLeft="8dp"
+        android:paddingTop="8dp"
+        android:textColor="#ffffff"
+        android:textSize="18dp" />
+
+    <TextView
+        android:id="@+id/item_campaignsDivision_period"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/item_campaignsDivision_name"
+        android:layout_marginBottom="8dp"
+        android:background="#46b8c9"
+        android:paddingBottom="8dp"
+        android:paddingLeft="8dp"
+        android:textColor="#ffffff"
+        android:textSize="12dp" />
+
+</RelativeLayout>

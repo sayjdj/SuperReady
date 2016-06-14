@@ -1,0 +1,171 @@
+<resources xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <style name="AppBaseTheme" parent="Theme.AppCompat.Light.NoActionBar"></style>
+
+    <style name="AppTheme" parent="AppBaseTheme">
+        <!-- All customizations that are NOT specific to a particular API-level can go here. -->
+    </style>
+
+    <style name="MainTitle" parent="Theme.AppCompat.Light">
+        <item name="colorPrimaryDark">#C91010</item>
+        <item name="android:windowNoTitle">false</item>
+        <item name="android:windowTitleSize">48dp</item>
+        <item name="android:windowTitleBackgroundStyle">@style/MainWindowTitleBackground</item>
+    </style>
+
+    <style name="MainWindowTitleBackground">
+        <item name="android:background">#ECECEC</item>
+    </style>
+
+    <style name="IntroTitle" parent="Theme.AppCompat.Light.NoActionBar">
+        <item name="colorPrimaryDark">#C91010</item>
+        <item name="android:windowNoTitle">false</item>
+        <item name="android:windowTitleSize">0dp</item>
+    </style>
+
+    <style name="BlockNoticeTitle" parent="Theme.AppCompat.Light.NoActionBar">
+        <item name="colorPrimaryDark">#C91010</item>
+        <item name="android:windowNoTitle">false</item>
+        <item name="android:windowTitleSize">0dp</item>
+    </style>
+
+    <style name="UpdateNoticeTitle" parent="Theme.AppCompat.Light.NoActionBar">
+        <item name="colorPrimaryDark">#C91010</item>
+        <item name="android:windowNoTitle">false</item>
+        <item name="android:windowTitleSize">0dp</item>
+    </style>
+
+    <style name="GoodsListTitle" parent="Theme.AppCompat.Light">
+        <item name="colorPrimaryDark">#C91010</item>
+        <item name="android:windowNoTitle">false</item>
+        <item name="android:windowTitleSize">48dp</item>
+        <item name="android:windowTitleBackgroundStyle">@style/GoodsListWindowTitleBackground</item>
+    </style>
+
+    <style name="GoodsListWindowTitleBackground">
+        <item name="android:background">#ECECEC</item>
+    </style>
+
+    <style name="LocationSettingTitle" parent="Theme.AppCompat.Light">
+        <item name="colorPrimaryDark">#C91010</item>
+        <item name="android:windowNoTitle">false</item>
+        <item name="android:windowTitleSize">48dp</item>
+        <item name="android:windowTitleBackgroundStyle">@style/LocationSettingWindowTitleBackground</item>
+    </style>
+
+    <style name="LocationSettingWindowTitleBackground">
+        <item name="android:background">#ECECEC</item>
+    </style>
+
+    <style name="GoodsFavoriteTitle" parent="Theme.AppCompat.Light">
+        <item name="colorPrimaryDark">#C91010</item>
+        <item name="android:windowNoTitle">false</item>
+        <item name="android:windowTitleSize">48dp</item>
+        <item name="android:windowTitleBackgroundStyle">@style/GoodsFavoriteWindowTitleBackground</item>
+    </style>
+
+    <style name="GoodsFavoriteWindowTitleBackground">
+        <item name="android:windowActionBar">false</item>
+        <item name="android:background">#ECECEC</item>
+    </style>
+
+    <style name="GoodsDetailTitle" parent="Theme.AppCompat.Light">
+        <item name="colorPrimaryDark">#C91010</item>
+        <item name="android:windowNoTitle">false</item>
+        <item name="android:windowTitleSize">48dp</item>
+        <item name="android:windowTitleBackgroundStyle">@style/GoodsDetailWindowTitleBackground</item>
+    </style>
+
+    <style name="GoodsDetailWindowTitleBackground">
+        <item name="android:background">#ECECEC</item>
+    </style>
+
+    <style name="UserJoinTitle" parent="Theme.AppCompat.Light">
+        <item name="colorPrimaryDark">#C91010</item>
+        <item name="android:windowNoTitle">false</item>
+        <item name="android:windowTitleSize">48dp</item>
+        <item name="android:windowTitleBackgroundStyle">@style/UserJoinWindowTitleBackground</item>
+    </style>
+
+    <style name="UserJoinWindowTitleBackground">
+        <item name="android:background">#ECECEC</item>
+    </style>
+
+    <style name="CustomSupportTitle" parent="Theme.AppCompat.Light">
+        <item name="colorPrimaryDark">#C91010</item>
+        <item name="android:windowNoTitle">false</item>
+        <item name="android:windowTitleSize">48dp</item>
+        <item name="android:windowTitleBackgroundStyle">@style/CustomSupportWindowTitleBackground</item>
+    </style>
+
+    <style name="CustomSupportWindowTitleBackground">
+        <item name="android:background">#ECECEC</item>
+    </style>
+
+    <style name="RoughMapTitle" parent="Theme.AppCompat.Light">
+        <item name="colorPrimaryDark">#C91010</item>
+        <item name="android:windowNoTitle">false</item>
+        <item name="android:windowTitleSize">48dp</item>
+        <item name="android:windowTitleBackgroundStyle">@style/RoughMapWindowTitleBackground</item>
+    </style>
+
+    <style name="RoughMapWindowTitleBackground">
+        <item name="android:background">#ECECEC</item>
+    </style>
+
+    <style name="MarketRequestTitle" parent="Theme.AppCompat.Light">
+        <item name="colorPrimaryDark">#C91010</item>
+        <item name="android:windowNoTitle">false</item>
+        <item name="android:windowTitleSize">48dp</item>
+        <item name="android:windowTitleBackgroundStyle">@style/MarketRequestWindowTitleBackground</item>
+    </style>
+
+    <style name="MarketRequestWindowTitleBackground">
+        <item name="android:background">#ECECEC</item>
+    </style>
+
+    <style name="GoodsFlyerTitle" parent="Theme.AppCompat.Light">
+        <item name="colorPrimaryDark">#C91010</item>
+        <item name="android:windowNoTitle">false</item>
+        <item name="android:windowTitleSize">48dp</item>
+        <item name="android:windowTitleBackgroundStyle">@style/GoodsFlyerWindowTitleBackground</item>
+    </style>
+
+    <style name="GoodsFlyerWindowTitleBackground">
+        <item name="android:background">#ECECEC</item>
+    </style>
+
+    <style name="MarketNoticeTitle" parent="Theme.AppCompat.Light">
+        <item name="colorPrimaryDark">#C91010</item>
+        <item name="android:windowNoTitle">false</item>
+        <item name="android:windowTitleSize">48dp</item>
+        <item name="android:windowTitleBackgroundStyle">@style/MarketNoticeWindowTitleBackground</item>
+    </style>
+
+    <style name="MarketNoticeWindowTitleBackground">
+        <item name="android:background">#ECECEC</item>
+    </style>
+
+    <style name="CouponPocketTitle" parent="Theme.AppCompat.Light">
+        <item name="colorPrimaryDark">#C91010</item>
+        <item name="android:windowNoTitle">false</item>
+        <item name="android:windowTitleSize">48dp</item>
+        <item name="android:windowTitleBackgroundStyle">@style/CouponPocketWindowTitleBackground</item>
+    </style>
+
+    <style name="CouponPocketWindowTitleBackground">
+        <item name="android:background">#ECECEC</item>
+    </style>
+
+    <style name="CouponReceiveTitle" parent="Theme.AppCompat.Light">
+    <item name="colorPrimaryDark">#C91010</item>
+    <item name="android:windowNoTitle">false</item>
+    <item name="android:windowTitleSize">48dp</item>
+    <item name="android:windowTitleBackgroundStyle">@style/CouponReceiveWindowTitleBackground</item>
+</style>
+
+    <style name="CouponReceiveWindowTitleBackground">
+        <item name="android:background">#ECECEC</item>
+    </style>
+
+</resources>

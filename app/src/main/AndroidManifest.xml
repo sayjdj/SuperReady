@@ -1,0 +1,151 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.haffle.superready">
+
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="com.google.android.providers.gsf.permission.READ_GSERVICES" />
+    <uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED" />
+    <uses-permission android:name="android.permission.WAKE_LOCK" />
+    <uses-permission android:name="com.google.android.c2dm.permission.RECEIVE" />
+
+    <permission
+        android:name="com.haffle.superready.permission.C2D_MESSAGE"
+        android:protectionLevel="signature" />
+    <uses-permission android:name="com.haffle.superready.permission.C2D_MESSAGE" />
+
+    <uses-feature
+        android:glEsVersion="0x00020000"
+        android:required="true" />
+    <permission
+        android:name="com.haffle.superready.permission.MAPS_RECEIVE"
+        android:protectionLevel="signature" />
+
+    <application
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name">
+        <activity
+            android:name=".intro.Intro"
+            android:theme="@style/IntroTitle">
+
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".market.MainActivity"
+            android:theme="@style/MainTitle">
+
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+                <category android:name="android.intent.category.BROWSABLE" />
+
+                <data
+                    android:host="@string/kakaolink_host"
+                    android:scheme="@string/kakao_scheme" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".location.LocationSettingActivity"
+            android:theme="@style/LocationSettingTitle" />
+        <activity
+            android:name=".goods_list.GoodsListActivity"
+            android:theme="@style/GoodsListTitle" />
+        <activity
+            android:name=".location.RoughMapActivity"
+            android:theme="@style/RoughMapTitle" />
+        <activity
+            android:name=".goods_favorite.GoodsFavoriteActivity"
+            android:theme="@style/GoodsFavoriteTitle" />
+        <activity
+            android:name=".user.UserJoinActivity"
+            android:theme="@style/UserJoinTitle" />
+        <activity
+            android:name=".goods_detail.GoodsDetailActivity"
+            android:theme="@style/GoodsDetailTitle" />
+        <activity
+            android:name=".notice.BlockNoticeActivity"
+            android:theme="@style/BlockNoticeTitle" />
+        <activity
+            android:name=".support.CustomerSupportActivity"
+            android:theme="@style/CustomSupportTitle" />
+        <activity
+            android:name=".notice.UpdateNoticeActivity"
+            android:theme="@style/UpdateNoticeTitle" />
+        <activity
+            android:name=".support.MarketRequestActivity"
+            android:theme="@style/MarketRequestTitle" />
+        <activity
+            android:name=".flyer.GoodsFlyerActivity"
+            android:theme="@style/GoodsFlyerTitle" />
+        <activity
+            android:name=".notice.MarketNoticeActivity"
+            android:theme="@style/MarketNoticeTitle" />
+        <activity
+            android:name=".coupon.CouponPocketActivity"
+            android:theme="@style/CouponPocketTitle" />
+        <activity
+            android:name=".coupon.CouponReceiveActivity"
+            android:theme="@style/CouponReceiveTitle" />
+
+        <meta-data
+            android:name="com.google.android.maps.v2.API_KEY"
+            android:value="@string/google_map_app_key" />
+        <meta-data
+            android:name="com.google.android.gms.version"
+            android:value="@integer/google_play_services_version" />
+        <meta-data
+            android:name="com.kakao.sdk.AppKey"
+            android:value="@string/kakao_app_key" />
+        <meta-data
+            android:name="io.fabric.ApiKey"
+            android:value="cc5ff290f925dde5873ef633f59ddb8b2d1b9dca" />
+
+        <receiver
+            android:name=".alarm.AlarmReceiver"
+            android:process=":remote" />
+        <receiver
+            android:name=".alarm.BootReceiver"
+            android:enabled="true"
+            android:exported="false">
+            <intent-filter>
+                <action android:name="android.intent.action.BOOT_COMPLETED" />
+            </intent-filter>
+        </receiver>
+        <receiver
+            android:name="com.google.android.gms.gcm.GcmReceiver"
+            android:exported="true"
+            android:permission="com.google.android.c2dm.permission.SEND">
+            <intent-filter>
+                <action android:name="com.google.android.c2dm.intent.RECEIVE" />
+                <category android:name="com.haffle.superready" />
+            </intent-filter>
+        </receiver>
+
+        <service
+            android:name="com.haffle.superready.gcm.MyGcmListenerService"
+            android:exported="false">
+            <intent-filter>
+                <action android:name="com.google.android.c2dm.intent.RECEIVE" />
+            </intent-filter>
+        </service>
+        <service
+            android:name="com.haffle.superready.gcm.MyInstanceIDListenerService"
+            android:exported="false">
+            <intent-filter>
+                <action android:name="com.google.android.gms.iid.InstanceID" />
+            </intent-filter>
+        </service>
+        <service
+            android:name="com.haffle.superready.gcm.RegistrationIntentService"
+            android:exported="false"></service>
+
+    </application>
+
+</manifest>

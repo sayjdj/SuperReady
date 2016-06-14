@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="104dp"
+    android:paddingBottom="8dp" >
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="96dp"
+        android:background="@layout/effect_round"
+        android:orientation="horizontal"
+        android:paddingBottom="1dp"
+        android:paddingTop="1dp" >
+
+        <ImageView
+            android:id="@+id/item_marketFavorite_image"
+            android:layout_width="104dp"
+            android:layout_height="96dp"
+            android:adjustViewBounds="true"
+            android:background="@drawable/home_card_image_anymart"
+            android:scaleType="centerCrop" />
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="96dp"
+            android:background="#ffffff"
+            android:orientation="vertical"
+            android:paddingLeft="8dp"
+            android:paddingTop="8dp" >
+
+            <TextView
+                android:id="@+id/item_marketFavorite_name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:singleLine="true"
+                android:textColor="#000000"
+                android:textSize="20dp" />
+
+            <TextView
+                android:id="@+id/item_marketFavorite_description"
+                android:layout_width="200dp"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/item_marketFavorite_name"
+                android:textColor="#4e4e4e"
+                android:textSize="14dp" />
+
+            <RelativeLayout
+                android:id="@+id/item_marketFavorite_deleteFavoriteLayout"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:layout_alignParentBottom="true"
+                android:layout_alignParentRight="true" >
+
+                <ImageView
+                    android:id="@+id/item_marketFavorite_deleteFavorite"
+                    android:layout_width="20dp"
+                    android:layout_height="20dp"
+                    android:layout_alignParentBottom="true"
+                    android:layout_alignParentRight="true"
+                    android:layout_marginBottom="8dp"
+                    android:layout_marginRight="12dp"
+                    android:background="@drawable/home_btn_adddone" />
+            </RelativeLayout>
+        </RelativeLayout>
+    </LinearLayout>
+
+</LinearLayout>

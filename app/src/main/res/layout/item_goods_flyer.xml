@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/item_goodsFlyer_layout"
+    android:layout_width="match_parent"
+    android:layout_height="276dp"
+    android:paddingBottom="8dp"
+    android:paddingLeft="8dp"
+    android:paddingRight="8dp">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="267.5dp"
+        android:background="@layout/effect_round"
+        android:padding="1dp">
+
+        <ImageView
+            android:id="@+id/item_goodsFlyer_image"
+            android:layout_width="match_parent"
+            android:layout_height="235dp"
+            android:adjustViewBounds="true"
+            android:scaleType="centerCrop"
+            android:layout_marginBottom="0.5dp"/>
+
+        <TextView
+            android:id="@+id/item_goodsFlyer_name"
+            android:layout_width="match_parent"
+            android:layout_height="30dp"
+            android:layout_alignParentBottom="true"
+            android:background="#ffffff"
+            android:gravity="center_vertical"
+            android:paddingLeft="4dp"
+            android:textColor="#000000"
+            android:textSize="16dp" />
+    </RelativeLayout>
+</LinearLayout>

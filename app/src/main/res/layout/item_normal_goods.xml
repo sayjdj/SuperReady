@@ -1,0 +1,216 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="246dp"
+    android:paddingBottom="8dp" >
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="horizontal"
+        android:paddingLeft="8dp"
+        android:paddingRight="8dp" >
+
+        <LinearLayout
+                android:id="@+id/item_normalGoods_left_layout"
+                android:layout_width="0dp"
+                android:layout_height="238dp"
+                android:layout_marginRight="4dp"
+                android:layout_weight="1"
+                android:background="@layout/effect_round"
+                android:orientation="vertical"
+                android:padding="1dp" >
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="136dp">
+
+                <ImageView
+                    android:id="@+id/item_normalGoods_left_image"
+                    android:layout_width="match_parent"
+                    android:layout_height="136dp"
+                    android:layout_marginBottom="0.5dp"
+                    android:adjustViewBounds="true"
+                    android:scaleType="centerCrop" />
+
+                <ImageView
+                    android:id="@+id/item_normalGoods_left_discountRate"
+                    android:layout_width="45dp"
+                    android:layout_height="40dp" />
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/item_normalGoods_left_highLight"
+                android:layout_width="match_parent"
+                android:layout_height="100dp"
+                android:background="#ffffff" >
+
+                <TextView
+                    android:id="@+id/item_normalGoods_left_name"
+                    android:layout_width="135dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="4dp"
+                    android:layout_marginTop="4dp"
+                    android:gravity="center_vertical"
+                    android:singleLine="true"
+                    android:textColor="#000000"
+                    android:textSize="16dp" />
+
+                <TextView
+                    android:id="@+id/item_normalGoods_left_description"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/item_normalGoods_left_name"
+                    android:layout_marginLeft="4dp"
+                    android:gravity="center_vertical"
+                    android:maxLines="2"
+                    android:textColor="#4e4e4e"
+                    android:textSize="14dp" />
+
+                <TextView
+                    android:id="@+id/item_normalGoods_left_priceExplanation"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_above="@+id/normalGoods_left_curPrice"
+                    android:layout_marginRight="4dp"
+                    android:text="슈퍼레디가"
+                    android:textColor="#ff1d1d"
+                    android:textSize="12dp" />
+
+                <TextView
+                    android:id="@+id/item_normalGoods_left_prePrice"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="4dp"
+                    android:layout_alignParentBottom="true"
+                    android:layout_toLeftOf="@+id/normalGoods_left_curPrice"
+                    android:layout_marginRight="4dp"
+                    android:textColor="#4e4e4e"
+                    android:textSize="16dp" />
+
+                <TextView
+                    android:id="@+id/item_normalGoods_left_curPrice"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentBottom="true"
+                    android:layout_marginBottom="4dp"
+                    android:layout_alignParentRight="true"
+                    android:layout_marginRight="4dp"
+                    android:textColor="#4e4e4e"
+                    android:textSize="20dp" />
+
+                <ImageView
+                    android:id="@+id/item_normalGoods_left_favorite"
+                    android:layout_width="28dp"
+                    android:layout_height="24dp"
+                    android:layout_alignParentRight="true"
+                    android:layout_marginTop="4dp"
+                    android:layout_marginRight="4dp"
+                    android:background="@drawable/btn_likered" />
+            </RelativeLayout>
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/item_normalGoods_right_layout"
+            android:layout_width="0dp"
+            android:layout_height="238dp"
+            android:layout_weight="1"
+            android:background="@layout/effect_round"
+            android:orientation="vertical"
+            android:padding="1dp"
+            android:visibility="invisible" >
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="136dp">
+
+                <ImageView
+                    android:id="@+id/item_normalGoods_right_image"
+                    android:layout_width="match_parent"
+                    android:layout_height="136dp"
+                    android:layout_marginBottom="0.5dp"
+                    android:adjustViewBounds="true"
+                    android:scaleType="centerCrop" />
+
+                <ImageView
+                    android:id="@+id/item_normalGoods_right_discountRate"
+                    android:layout_width="45dp"
+                    android:layout_height="40dp" />
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/item_normalGoods_right_highLight"
+                android:layout_width="match_parent"
+                android:layout_height="100dp"
+                android:background="#ffffff" >
+
+                <TextView
+                    android:id="@+id/item_normalGoods_right_name"
+                    android:layout_width="135dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="4dp"
+                    android:layout_marginTop="4dp"
+                    android:gravity="center_vertical"
+                    android:singleLine="true"
+                    android:textColor="#000000"
+                    android:textSize="16dp" />
+
+                <TextView
+                    android:id="@+id/item_normalGoods_right_description"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/item_normalGoods_right_name"
+                    android:layout_marginLeft="4dp"
+                    android:gravity="center_vertical"
+                    android:maxLines="2"
+                    android:textColor="#4e4e4e"
+                    android:textSize="14dp" />
+
+                <TextView
+                    android:id="@+id/item_normalGoods_right_priceExplanation"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_above="@+id/normalGoods_right_curPrice"
+                    android:layout_marginRight="4dp"
+                    android:text="슈퍼레디가"
+                    android:textColor="#ff1d1d"
+                    android:textSize="12dp" />
+
+                <TextView
+                    android:id="@+id/item_normalGoods_right_prePrice"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="4dp"
+                    android:layout_alignParentBottom="true"
+                    android:layout_toLeftOf="@+id/normalGoods_right_curPrice"
+                    android:layout_marginRight="4dp"
+                    android:textColor="#4e4e4e"
+                    android:textSize="16dp" />
+
+                <TextView
+                    android:id="@+id/item_normalGoods_right_curPrice"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentBottom="true"
+                    android:layout_marginBottom="4dp"
+                    android:layout_marginRight="4dp"
+                    android:layout_alignParentRight="true"
+                    android:textColor="#4e4e4e"
+                    android:textSize="20dp" />
+
+                <ImageView
+                    android:id="@+id/item_normalGoods_right_favorite"
+                    android:layout_width="28dp"
+                    android:layout_height="24dp"
+                    android:layout_alignParentRight="true"
+                    android:layout_marginTop="4dp"
+                    android:layout_marginRight="4dp"
+                    android:background="@drawable/btn_likered" />
+            </RelativeLayout>
+        </LinearLayout>
+    </LinearLayout>
+
+</LinearLayout>
